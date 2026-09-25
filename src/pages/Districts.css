@@ -1,0 +1,877 @@
+/* =========================================================
+   DISTRICTS PAGE
+========================================================= */
+
+.districts-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px 5% 55px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(220, 246, 226, 0.55),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #f8fff9 0%,
+      #ffffff 45%,
+      #f7fcf8 100%
+    );
+
+  color: #182544;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.districts-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-bottom: 16px;
+  padding: 9px 18px;
+
+  border: 1px solid #b9dfc3;
+  border-radius: 22px;
+
+  background: #ffffff;
+  color: #238b45;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  appearance: none;
+
+  box-shadow:
+    0 4px 12px rgba(35, 139, 69, 0.08);
+
+  transition: all 0.2s ease;
+}
+
+.districts-back-button:hover {
+  background: #238b45;
+  color: #ffffff;
+  transform: translateX(-3px);
+  box-shadow:
+    0 7px 18px rgba(35, 139, 69, 0.17);
+}
+
+.districts-back-button span:first-child {
+  font-size: 20px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.districts-page-header {
+  width: 100%;
+  min-height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 20px 24px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #d4e8d9;
+  border-radius: 15px;
+
+  box-shadow:
+    0 6px 20px rgba(45, 95, 60, 0.07);
+}
+
+
+/* =========================================================
+   HEADER CONTENT
+========================================================= */
+
+.districts-header-content {
+  min-width: 0;
+}
+
+.districts-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #319653;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.districts-page-header h1 {
+  margin: 0;
+
+  color: #15243d;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.districts-page-header p {
+  margin: 7px 0 0;
+
+  color: #78848d;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   DISTRICT COUNT
+========================================================= */
+
+.district-count {
+  width: 78px;
+  min-width: 78px;
+  height: 78px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #edf8eb;
+  border: 1px solid #cce5c6;
+
+  box-sizing: border-box;
+}
+
+.district-count strong {
+  display: block;
+
+  color: #319653;
+
+  font-size: 23px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.district-count span {
+  margin-top: 6px;
+
+  color: #4d8059;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.district-search-box {
+  width: 100%;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  margin: 16px 0;
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #cbddea;
+  border-radius: 9px;
+
+  box-shadow:
+    0 3px 10px rgba(60, 100, 120, 0.04);
+
+  transition: all 0.2s ease;
+}
+
+.district-search-box:focus-within {
+  border-color: #65a9ec;
+
+  box-shadow:
+    0 0 0 3px rgba(74, 158, 255, 0.09);
+}
+
+.search-icon {
+  margin-right: 9px;
+  font-size: 15px;
+}
+
+.district-search-box input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #26344d;
+
+  font-size: 12px;
+}
+
+.district-search-box input::placeholder {
+  color: #9aa5af;
+}
+
+
+/* =========================================================
+   DISTRICT GRID
+========================================================= */
+
+.district-cards-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   MAIN DISTRICT CARD
+========================================================= */
+
+.district-page-card {
+  position: relative;
+
+  width: 100%;
+  height: 235px;
+
+  min-width: 0;
+
+  display: block;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dce5df;
+  border-top: 4px solid #55a76a;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  appearance: none;
+
+  color: #182544;
+
+  box-shadow:
+    0 4px 13px rgba(40, 80, 55, 0.07);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.district-page-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 28px rgba(40, 80, 55, 0.16);
+}
+
+
+/* =========================================================
+   IMAGE - FULL CARD BACKGROUND
+========================================================= */
+
+.district-card-top {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: calc(100% - 48px);
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.district-card-image {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 0;
+
+  background: #eeeeee;
+
+  border: none;
+
+  box-shadow: none;
+}
+
+.district-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.35s ease;
+}
+
+.district-page-card:hover
+.district-card-image img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   DARK GRADIENT OVER IMAGE
+========================================================= */
+
+.district-card-top::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 65%;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.45) 38%,
+      rgba(0, 0, 0, 0.05) 100%
+    );
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.district-card-number {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  z-index: 5;
+
+  min-width: 34px;
+
+  padding: 6px 9px;
+
+  box-sizing: border-box;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  color: #4b5665;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-align: center;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   CONTENT ON IMAGE
+========================================================= */
+
+.district-card-content {
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+
+  bottom: 61px;
+
+  z-index: 4;
+
+  min-width: 0;
+
+  padding: 0;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DISTRICT NAME
+========================================================= */
+
+.district-card-content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  line-height: 1.25;
+
+  word-break: break-word;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   HEADQUARTERS
+========================================================= */
+
+.district-card-content p {
+  margin: 6px 0 0;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.district-card-content strong {
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   VIEW DETAILS WHITE SECTION
+========================================================= */
+
+.district-card-bottom {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 48px;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e4ebe6;
+}
+
+
+/* =========================================================
+   VIEW DETAILS TEXT
+========================================================= */
+
+.district-card-bottom span {
+  color: #3b9660;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.district-card-bottom b {
+  color: #3b9660;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.district-page-card:hover
+.district-card-bottom b {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   PINK CARD
+========================================================= */
+
+.district-card-0 {
+  border-top-color: #e56b91;
+}
+
+.district-card-0 .district-card-number {
+  color: #d6537d;
+  background: #fff0f5;
+}
+
+.district-card-0
+.district-card-bottom span,
+.district-card-0
+.district-card-bottom b {
+  color: #d6537d;
+}
+
+
+/* =========================================================
+   BLUE CARD
+========================================================= */
+
+.district-card-1 {
+  border-top-color: #4e91e8;
+}
+
+.district-card-1 .district-card-number {
+  color: #4385d3;
+  background: #edf5ff;
+}
+
+.district-card-1
+.district-card-bottom span,
+.district-card-1
+.district-card-bottom b {
+  color: #4385d3;
+}
+
+
+/* =========================================================
+   PURPLE CARD
+========================================================= */
+
+.district-card-2 {
+  border-top-color: #8968d8;
+}
+
+.district-card-2 .district-card-number {
+  color: #7656c6;
+  background: #f3efff;
+}
+
+.district-card-2
+.district-card-bottom span,
+.district-card-2
+.district-card-bottom b {
+  color: #7656c6;
+}
+
+
+/* =========================================================
+   YELLOW CARD
+========================================================= */
+
+.district-card-3 {
+  border-top-color: #e4ad35;
+}
+
+.district-card-3 .district-card-number {
+  color: #c28d20;
+  background: #fff8df;
+}
+
+.district-card-3
+.district-card-bottom span,
+.district-card-3
+.district-card-bottom b {
+  color: #c28d20;
+}
+
+
+/* =========================================================
+   RED CARD
+========================================================= */
+
+.district-card-4 {
+  border-top-color: #e05d5d;
+}
+
+.district-card-4 .district-card-number {
+  color: #cf4f4f;
+  background: #fff0f0;
+}
+
+.district-card-4
+.district-card-bottom span,
+.district-card-4
+.district-card-bottom b {
+  color: #cf4f4f;
+}
+
+
+/* =========================================================
+   GREEN CARD
+========================================================= */
+
+.district-card-5 {
+  border-top-color: #4aa866;
+}
+
+.district-card-5 .district-card-number {
+  color: #389252;
+  background: #eaf8ed;
+}
+
+.district-card-5
+.district-card-bottom span,
+.district-card-5
+.district-card-bottom b {
+  color: #389252;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.district-empty {
+  width: 100%;
+
+  margin-top: 25px;
+  padding: 40px 20px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #dce9df;
+
+  border-radius: 14px;
+}
+
+.district-empty h2 {
+  margin: 0;
+
+  color: #26384d;
+
+  font-size: 20px;
+}
+
+.district-empty p {
+  margin: 8px 0 0;
+
+  color: #87919a;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .districts-page {
+    padding: 25px 4%;
+  }
+
+  .district-cards-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .district-page-card {
+    height: 230px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .districts-page {
+    padding: 22px 3%;
+  }
+
+  .district-cards-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 13px;
+  }
+
+  .district-page-card {
+    height: 225px;
+  }
+
+  .districts-page-header {
+    padding: 18px;
+  }
+
+  .districts-page-header h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .districts-page {
+    padding: 18px 12px 40px;
+  }
+
+  .districts-page-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+  }
+
+  .district-count {
+    width: 100%;
+    height: 55px;
+
+    flex-direction: row;
+
+    gap: 8px;
+  }
+
+  .district-count strong {
+    font-size: 18px;
+  }
+
+  .district-count span {
+    margin-top: 0;
+
+    font-size: 7px;
+  }
+
+  .district-cards-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .district-page-card {
+    height: 235px;
+  }
+
+  .district-card-content {
+    left: 15px;
+    right: 15px;
+  }
+
+  .district-card-content h2 {
+    font-size: 17px;
+  }
+
+  .district-card-content p {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .districts-page {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .districts-page-header h1 {
+    font-size: 21px;
+  }
+
+  .district-page-card {
+    height: 225px;
+  }
+
+  .district-card-content h2 {
+    font-size: 15px;
+  }
+}

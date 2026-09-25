@@ -1,0 +1,4677 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.district-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f7f5;
+  color: #24332b;
+  font-family:
+    Inter,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.district-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  min-height: 62px;
+  padding: 10px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #dfe7e2;
+
+  backdrop-filter: blur(12px);
+}
+
+.back-button {
+  border: 0;
+  padding: 9px 15px;
+
+  border-radius: 9px;
+
+  background: #eaf4ed;
+  color: #276b43;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  background: #d9eddf;
+  transform: translateX(-2px);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #718078;
+  font-size: 14px;
+}
+
+.breadcrumb b {
+  color: #b1bbb5;
+}
+
+.breadcrumb strong {
+  color: #243b2e;
+}
+
+.district-badge {
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: #edf7f0;
+  border: 1px solid #cfe5d6;
+
+  color: #36744c;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.district-page {
+  width: min(1450px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 25px 0 40px;
+}
+
+
+
+/* =========================================
+   TOP STATS
+========================================= */
+
+.district-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 13px;
+
+  margin: 18px 0;
+}
+
+.stat-card {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  border: 1px solid transparent;
+
+  transition: 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  font-size: 21px;
+}
+
+.stat-card span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  color: #68766f;
+}
+
+.stat-card strong {
+  display: block;
+
+  color: #25372d;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* Different stat colors */
+
+.population-stat {
+  background: #eef7ff;
+  border-color: #d0e2f1;
+}
+
+.area-stat {
+  background: #fff8eb;
+  border-color: #efdfbe;
+}
+
+.hq-stat {
+  background: #f5efff;
+  border-color: #ded2f2;
+}
+
+.block-stat {
+  background: #edfaf1;
+  border-color: #cee5d5;
+}
+
+.tehsil-stat {
+  background: #fff2ed;
+  border-color: #efd4c8;
+}
+
+
+/* =========================================
+   MAIN GRID
+========================================= */
+
+.district-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(320px, 0.95fr);
+  gap: 18px;
+
+  align-items: start;
+}
+
+.district-left-column,
+.district-right-column {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.district-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+  border: 1px solid #e0e8e3;
+
+  box-shadow:
+    0 5px 20px rgba(35, 61, 45, 0.045);
+}
+
+.card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-bottom: 17px;
+}
+
+.card-heading span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #72907d;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.card-heading h2 {
+  margin: 0;
+
+  color: #26382e;
+
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.heading-icon {
+  width: 39px;
+  height: 39px;
+  min-width: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #f0f5f1;
+
+  font-size: 19px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-card {
+  background:
+    linear-gradient(
+      135deg,
+      #f8fbff,
+      #eef6ff
+    );
+
+  border-color: #d1e2f1;
+}
+
+.about-card .heading-icon {
+  background: #e0effc;
+}
+
+.about-text {
+  margin: 0;
+
+  color: #596960;
+
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+
+/* =========================================
+   ADMINISTRATION
+========================================= */
+
+.administration-card {
+  background:
+    linear-gradient(
+      135deg,
+      #fffdf8,
+      #fff8e9
+    );
+
+  border-color: #ecdfc3;
+}
+
+.administration-card .heading-icon {
+  background: #ffedc9;
+}
+
+.admin-table {
+  overflow: hidden;
+
+  border: 1px solid #eadfc9;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.admin-row {
+  min-height: 48px;
+
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  align-items: center;
+  gap: 15px;
+
+  padding: 9px 13px;
+
+  border-bottom: 1px solid #eee5d7;
+}
+
+.admin-row:last-child {
+  border-bottom: 0;
+}
+
+.admin-row span {
+  color: #806d51;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-row strong {
+  color: #344238;
+
+  font-size: 13px;
+
+  overflow-wrap: anywhere;
+}
+
+.official-website {
+  margin-top: 14px;
+  padding: 13px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  text-decoration: none;
+
+  border-radius: 12px;
+
+  background: #eaf6ee;
+  border: 1px solid #cce4d3;
+
+  color: #28623c;
+
+  transition: 0.2s ease;
+}
+
+.official-website:hover {
+  background: #dff0e5;
+  transform: translateY(-1px);
+}
+
+.official-icon {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  font-size: 18px;
+}
+
+.official-website > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.official-website strong,
+.official-website small {
+  display: block;
+}
+
+.official-website strong {
+  font-size: 13px;
+}
+
+.official-website small {
+  margin-top: 2px;
+
+  color: #718077;
+
+  font-size: 11px;
+}
+
+.official-website > b {
+  font-size: 12px;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-section {
+  background:
+    linear-gradient(
+      135deg,
+      #fffaff,
+      #f7f1ff
+    );
+
+  border-color: #ded4ed;
+}
+
+.gallery-section .heading-icon {
+  background: #ece1fa;
+}
+
+.district-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+
+  max-height: 400px;
+
+  padding-right: 5px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.gallery-photo-card {
+  position: relative;
+
+  height: 200px;
+  min-height: 125px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 11px;
+
+  background: #edf1ee;
+  border: 1px solid #e0e6e1;
+}
+
+.gallery-photo-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.gallery-photo-card:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-photo-card figcaption {
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+
+  padding: 6px 8px;
+
+  border-radius: 7px;
+
+  background: rgba(0, 0, 0, 0.58);
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   EDUCATION
+========================================= */
+
+.education-card {
+  background:
+    linear-gradient(
+      135deg,
+      #fffdf8,
+      #fff8e9
+    );
+
+  border-color: #eedfbc;
+}
+
+.education-card .heading-icon {
+  background: #ffedc9;
+}
+
+.education-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+
+  margin-bottom: 18px;
+}
+
+.education-stat {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  border: 1px solid transparent;
+
+  transition: 0.2s ease;
+}
+
+.education-stat:hover {
+  transform: translateY(-2px);
+}
+
+.education-stat-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  font-size: 19px;
+}
+
+.education-stat span {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #66736b;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.education-stat strong {
+  display: block;
+
+  color: #26372d;
+
+  font-size: 21px;
+}
+
+
+/* Education individual colors */
+
+.school-stat {
+  background: #eaf5ff;
+  border-color: #cbdff0;
+}
+
+.school-stat .education-stat-icon {
+  background: #d8ecff;
+}
+
+.private-school-stat {
+  background: #fff3e5;
+  border-color: #edd4b7;
+}
+
+.private-school-stat .education-stat-icon {
+  background: #ffe2c5;
+}
+
+.college-stat {
+  background: #eefbea;
+  border-color: #cde3c5;
+}
+
+.college-stat .education-stat-icon {
+  background: #def2d7;
+}
+
+.university-stat {
+  background: #f3edff;
+  border-color: #d8cdef;
+}
+
+.university-stat .education-stat-icon {
+  background: #e5d9ff;
+}
+
+
+/* =========================================
+   EDUCATION LIST GRID
+========================================= */
+
+.education-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+
+  min-width: 0;
+}
+
+.list-box {
+  min-width: 0;
+
+  padding: 13px;
+
+  overflow: hidden;
+
+  border: 1px solid #dfe7e2;
+  border-radius: 12px;
+}
+
+.blue-list {
+  background:
+    linear-gradient(
+      135deg,
+      #f4faff,
+      #eaf4ff
+    );
+
+  border-color: #c9dff2;
+}
+
+.purple-list {
+  background:
+    linear-gradient(
+      135deg,
+      #fbf8ff,
+      #f1ebff
+    );
+
+  border-color: #d9cff0;
+}
+
+.list-box-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+}
+
+.list-box-heading h4 {
+  margin: 0;
+
+  color: #315b78;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.purple-list .list-box-heading h4 {
+  color: #684c8d;
+}
+
+.list-box-heading > span {
+  min-width: 26px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 7px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.list-box ul {
+  height: 180px;
+  max-height: 180px;
+
+  margin: 0;
+  padding: 0 6px 0 0;
+
+  list-style: none;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.list-box li {
+  display: flex;
+  align-items: flex-start;
+
+  min-width: 0;
+
+  margin-bottom: 5px;
+
+  border-radius: 8px;
+}
+
+.list-box li:last-child {
+  margin-bottom: 0;
+}
+
+.list-box .list-text {
+  min-width: 0;
+
+  color: #46584d;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.list-dot {
+  width: 7px;
+  height: 7px;
+  min-width: 7px;
+
+  margin-top: 6px;
+  margin-right: 8px;
+
+  border-radius: 50%;
+}
+
+.blue-list .list-dot {
+  background: #438fc8;
+}
+
+.purple-list .list-dot {
+  background: #8764ae;
+}
+
+
+/* College links */
+
+.college-link,
+.university-link {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  padding: 8px 9px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 17px;
+
+  transition: 0.2s ease;
+}
+
+.college-link {
+  color: #185c8c;
+}
+
+.college-link:hover {
+  background: #dceeff;
+}
+
+.university-link {
+  color: #65458c;
+}
+
+.university-link:hover {
+  background: #e9ddff;
+}
+
+.college-link span,
+.university-link span {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+}
+
+.college-link b,
+.university-link b {
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   BLOCKS + TEHSILS
+========================================= */
+
+.administrative-units-card {
+  background:
+    linear-gradient(
+      135deg,
+      #f8fcf9,
+      #eef7f0
+    );
+
+  border-color: #d0e3d5;
+}
+
+.blocks-tehsils-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.data-list-card {
+  min-width: 0;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.green-list {
+  background:
+    linear-gradient(
+      135deg,
+      #f2fff6,
+      #e6f8eb
+    );
+
+  border: 1px solid #c8e4d0;
+}
+
+.orange-list {
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf2,
+      #fff0dc
+    );
+
+  border: 1px solid #eed5b1;
+}
+
+.data-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+}
+
+.data-list-heading h3 {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.green-list .data-list-heading h3 {
+  color: #2b7145;
+}
+
+.orange-list .data-list-heading h3 {
+  color: #9a5e1b;
+}
+
+.data-list-heading > span {
+  min-width: 27px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.data-list-card ul {
+  height: 180px;
+  max-height: 180px;
+
+  margin: 0;
+  padding: 0 6px 0 0;
+
+  list-style: none;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.data-list-card li {
+  display: flex;
+  align-items: flex-start;
+
+  margin-bottom: 6px;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.green-list .list-dot {
+  background: #48a365;
+}
+
+.orange-list .list-dot {
+  background: #d58a31;
+}
+
+
+/* =========================================
+   TOURIST
+========================================= */
+
+.tourist-card {
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf5,
+      #fff0e4
+    );
+
+  border-color: #efd5be;
+}
+
+.tourist-card .heading-icon {
+  background: #ffe3cd;
+}
+
+.tourist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  max-height: 420px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 5px;
+}
+
+.tourist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid #efdccc;
+
+  transition: 0.2s ease;
+}
+
+.tourist-item:hover {
+  background: #ffffff;
+  transform: translateX(3px);
+}
+
+.tourist-number {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #e29a55;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tourist-info {
+  min-width: 0;
+}
+
+.tourist-info strong {
+  display: block;
+
+  color: #4c3a2c;
+
+  font-size: 13px;
+}
+
+.tourist-info span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #897668;
+
+  font-size: 10px;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   CITIES
+========================================= */
+
+.cities-card {
+  background:
+    linear-gradient(
+      135deg,
+      #faf8ff,
+      #f0ecff
+    );
+
+  border-color: #dad2ef;
+}
+
+.cities-card .heading-icon {
+  background: #e7defa;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+
+  max-height: 420px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-right: 5px;
+}
+
+.city-card {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+
+  text-align: left;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #ddd5ed;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.city-card:hover,
+.city-card.active {
+  background: #ffffff;
+  border-color: #ae9bd1;
+
+  transform: translateY(-2px);
+}
+
+.city-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e8defb;
+
+  font-size: 18px;
+}
+
+.city-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.city-info strong {
+  display: block;
+
+  color: #47375e;
+
+  font-size: 13px;
+}
+
+.city-info span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #837895;
+
+  font-size: 10px;
+}
+
+.city-info small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #6d617d;
+
+  font-size: 9px;
+}
+
+.city-card > b {
+  color: #74559a;
+  font-size: 17px;
+}
+
+
+/* =========================================
+   POLICE
+========================================= */
+
+.police-card {
+  background:
+    linear-gradient(
+      135deg,
+      #fff9f9,
+      #ffeded
+    );
+
+  border-color: #edcece;
+}
+
+.police-card .heading-icon {
+  background: #ffe0e0;
+}
+
+.count-badge {
+  min-width: 42px;
+  min-height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px 8px;
+
+  border-radius: 20px;
+
+  background: #ffe1e1;
+  color: #a34f4f;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.scroll-data-list {
+  height: 230px;
+  max-height: 230px;
+
+  margin: 0;
+  padding: 0 6px 0 0;
+
+  list-style: none;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scroll-data-list li {
+  display: flex;
+  align-items: flex-start;
+
+  margin-bottom: 5px;
+  padding: 7px 8px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  border: 1px solid #f0dada;
+
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.police-card .list-dot {
+  background: #d75e5e;
+}
+
+
+/* =========================================
+   RAILWAY
+========================================= */
+
+.railway-card {
+  background:
+    linear-gradient(
+      135deg,
+      #f6fbff,
+      #eaf5ff
+    );
+
+  border-color: #cadfeb;
+}
+
+.railway-card .heading-icon {
+  background: #dceefe;
+}
+
+.railway-card .count-badge {
+  background: #dfeffc;
+  color: #3f7599;
+}
+
+.railway-card .scroll-data-list li {
+  border-color: #d5e6f0;
+}
+
+.railway-card .list-dot {
+  background: #448fbf;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-card {
+  background:
+    linear-gradient(
+      135deg,
+      #fbf9ff,
+      #f1ecff
+    );
+
+  border-color: #ddd3ef;
+}
+
+.contact-card .heading-icon {
+  background: #e8defa;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 11px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ded5ed;
+}
+
+.contact-item > span {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #e9e0fa;
+
+  font-size: 17px;
+}
+
+.contact-item > div {
+  min-width: 0;
+}
+
+.contact-item strong,
+.contact-item small {
+  display: block;
+}
+
+.contact-item strong {
+  color: #4d3e61;
+
+  font-size: 12px;
+}
+
+.contact-item small {
+  margin-top: 2px;
+
+  color: #766b80;
+
+  font-size: 11px;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   NO DATA
+========================================= */
+
+.no-data {
+  margin: 0;
+
+  padding: 10px;
+
+  color: #87938c;
+
+  font-size: 12px;
+
+  list-style: none;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.district-page-wrapper ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.district-page-wrapper ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.district-page-wrapper ::-webkit-scrollbar-thumb {
+  background: #c5d0c9;
+  border-radius: 20px;
+}
+
+.district-page-wrapper ::-webkit-scrollbar-thumb:hover {
+  background: #9dac9f;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.district-footer {
+  width: min(1450px, calc(100% - 40px));
+
+  margin: 0 auto 25px;
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+  border: 1px solid #dfe7e2;
+
+  box-shadow:
+    0 5px 18px rgba(35, 61, 45, 0.04);
+}
+
+.district-footer strong,
+.district-footer span {
+  display: block;
+}
+
+.district-footer strong {
+  color: #294334;
+
+  font-size: 14px;
+}
+
+.district-footer span {
+  margin-top: 3px;
+
+  color: #849088;
+
+  font-size: 11px;
+}
+
+.district-footer a {
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  background: #edf7f0;
+  color: #32704a;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.district-footer a:hover {
+  background: #dcefe2;
+}
+
+
+/* =========================================
+   PAGE NOT FOUND
+========================================= */
+
+.page-not-found {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: #f4f7f5;
+}
+
+.not-found-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 18px;
+
+  background: #eaf4ed;
+
+  font-size: 32px;
+}
+
+.page-not-found h2 {
+  margin: 0 0 8px;
+
+  color: #294335;
+
+  font-size: 25px;
+}
+
+.page-not-found p {
+  margin: 0 0 18px;
+
+  color: #718078;
+
+  font-size: 14px;
+}
+
+.page-not-found button {
+  padding: 10px 17px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #36764d;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE - 1200
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .district-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .district-main-grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.9fr);
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - 950
+========================================= */
+
+@media (max-width: 950px) {
+
+  .district-page {
+    width: min(100% - 28px, 900px);
+  }
+
+  .district-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .district-right-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .district-right-column .tourist-card,
+  .district-right-column .cities-card {
+    grid-column: span 2;
+  }
+
+  .education-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - 700
+========================================= */
+
+@media (max-width: 700px) {
+
+  .district-topbar {
+    padding: 10px 15px;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  .district-badge {
+    margin-left: auto;
+  }
+
+  .district-page {
+    width: calc(100% - 22px);
+    padding-top: 15px;
+  }
+
+  .district-hero {
+    min-height: auto;
+
+    padding: 23px;
+
+    border-radius: 16px;
+  }
+
+  .hero-symbol {
+    display: none;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+  }
+
+  .hero-location-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    font-size: 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 29px;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+  }
+
+  .district-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .district-card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .education-list-grid,
+  .blocks-tehsils-grid,
+  .health-lists {
+    grid-template-columns: 1fr;
+  }
+
+  .district-right-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .district-right-column .tourist-card,
+  .district-right-column .cities-card {
+    grid-column: auto;
+  }
+
+  .helpline-list {
+    grid-template-columns: 1fr;
+  }
+
+  .district-footer {
+    width: calc(100% - 22px);
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - 520
+========================================= */
+
+@media (max-width: 520px) {
+
+  .district-topbar {
+    min-height: 55px;
+  }
+
+  .back-button {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+
+  .district-badge {
+    padding: 6px 9px;
+    font-size: 8px;
+  }
+
+  .district-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .education-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .district-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-photo-card {
+    height: 105px;
+    min-height: 105px;
+  }
+
+  .admin-row {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .admin-row strong {
+    padding-left: 0;
+  }
+
+  .card-heading h2 {
+    font-size: 18px;
+  }
+
+  .health-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - 380
+========================================= */
+
+@media (max-width: 380px) {
+
+  .district-page {
+    width: calc(100% - 16px);
+  }
+
+  .district-hero {
+    padding: 18px;
+  }
+
+  .hero-location-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+  }
+
+  .hero-text h1 {
+    font-size: 25px;
+  }
+
+  .district-card {
+    padding: 13px;
+  }
+
+  .district-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-photo-card {
+    height: 130px;
+  }
+
+  .district-footer {
+    width: calc(100% - 16px);
+  }
+
+}
+
+/* =========================================
+   IMPORTANT PLACES + FAMOUS FOOD GRID
+========================================= */
+
+.district-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+
+/* =========================================
+   COMMON SECTION
+========================================= */
+
+.district-bottom-grid .district-section {
+  margin: 0;
+  padding: 12px;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   IMPORTANT PLACES
+========================================= */
+
+.important-places-section {
+  border: 1px solid #dce8d2;
+  background: #fbfdf9 !important;
+}
+
+.important-places-section .section-label {
+  color: #76953a;
+}
+
+.important-places-section .section-count {
+  background: #f0f7e6;
+  border: 1px solid #d7e6c1;
+  color: #69872e;
+}
+
+.important-places-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.important-place-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-height: 48px;
+  padding: 7px 8px;
+
+  border: 1px solid #e0e8d9;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+.important-place-card:hover {
+  border-color: #bfd39e;
+  background: #fafff6;
+  transform: translateY(-1px);
+}
+
+.important-place-icon {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #eef6e4;
+  border: 1px solid #dce9cc;
+
+  font-size: 15px;
+}
+
+.important-place-content {
+  min-width: 0;
+}
+
+.important-place-content h3 {
+  margin: 0 0 2px;
+
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  color: #40502f;
+}
+
+.important-place-content p {
+  margin: 0;
+
+  font-size: 8px;
+  color: #8a9084;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.district-bottom-grid .section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 2px;
+}
+
+.district-bottom-grid .section-label {
+  display: block;
+
+  margin-bottom: 2px;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.district-bottom-grid .section-title-row h2 {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #303b28;
+}
+
+.district-bottom-grid .section-count {
+  padding: 3px 7px;
+
+  border-radius: 12px;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+  .district-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .important-places-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Villages */
+.village-stat {
+  background: #f4f9f6;
+  border-color: #dce9e1;
+}
+
+.village-stat .stat-icon {
+  background: #e5f2e9;
+}
+
+/* Gram Panchayats */
+.panchayat-stat {
+  background: #f8f5fb;
+  border-color: #e5dced;
+}
+
+.panchayat-stat .stat-icon {
+  background: #eee7f5;
+}
+
+/* =========================================
+   LANGUAGES & DIALECTS
+========================================= */
+
+.languages-section {
+  border: 1px solid #dce8d2;
+  background: #fbfdf9 !important;
+}
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.languages-section .section-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+.languages-section .section-icon {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #eef6e4;
+  border: 1px solid #dce9cc;
+
+  font-size: 15px;
+}
+
+.languages-section .section-title h2 {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #303b28;
+}
+
+.languages-section .section-title p {
+  margin: 2px 0 0;
+
+  font-size: 8px;
+  color: #8a9084;
+}
+
+
+/* =========================================
+   LANGUAGE GRID
+========================================= */
+
+.detail-tag-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 7px;
+
+  margin-top: 10px;
+}
+
+
+/* =========================================
+   LANGUAGE CARD
+========================================= */
+
+.language-card {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 48px;
+
+  padding: 7px 8px;
+
+  border: 1px solid #e0e8d9;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+.language-card:hover {
+  border-color: #bfd39e;
+
+  background: #fafff6;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   LANGUAGE ICON
+========================================= */
+
+.language-icon {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #eef6e4;
+
+  border: 1px solid #dce9cc;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   LANGUAGE NAME
+========================================= */
+
+.language-card strong {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  color: #40502f;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+  .detail-tag-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .detail-tag-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   DEMOGRAPHY
+========================================= */
+
+.demography-section {
+  background:
+    linear-gradient(
+      135deg,
+      #f8fcf9,
+      #eef7f0
+    );
+
+  border-color: #d0e3d5;
+}
+
+/* Section Heading */
+.demography-section .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.demography-section .section-icon {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #dcf3e4;
+  border: 1px solid #c8e4d0;
+
+  font-size: 17px;
+}
+
+.demography-section .section-title h2 {
+  margin: 0;
+  color: #2b7145;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.demography-section .section-title p {
+  margin: 2px 0 0;
+  color: #718078;
+  font-size: 10px;
+}
+
+/* Cards Grid */
+.demography-section .detail-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Individual Card */
+.demography-section .info-detail-card {
+  min-width: 0;
+  padding: 12px;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #dbe7df;
+
+  transition: 0.2s ease;
+  overflow: hidden;
+}
+
+.demography-section .info-detail-card:hover {
+  background: #ffffff;
+  border-color: #b9d8c3;
+  transform: translateY(-2px);
+}
+
+/* Card Icon */
+.demography-section .detail-card-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 7px;
+
+  border-radius: 8px;
+
+  background: #e4f4e9;
+  border: 1px solid #d0e7d7;
+
+  font-size: 16px;
+}
+
+/* Card Label */
+.demography-section .info-detail-card > span:not(.detail-card-icon) {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #526158;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* Card Value */
+.demography-section .info-detail-card strong {
+  display: block;
+
+  color: #2b7145;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   CARD COLORS
+========================================= */
+
+/* Male Population */
+.demography-section .info-detail-card:nth-child(1) {
+  background: #f2fff6;
+  border-color: #c8e4d0;
+}
+
+.demography-section .info-detail-card:nth-child(1) .detail-card-icon {
+  background: #e0f3e6;
+}
+
+
+/* Female Population */
+.demography-section .info-detail-card:nth-child(2) {
+  background: #fffaf6;
+  border-color: #ead9c8;
+}
+
+.demography-section .info-detail-card:nth-child(2) .detail-card-icon {
+  background: #fff0df;
+}
+
+
+/* Literacy Cards */
+.demography-section .info-detail-card:nth-child(3),
+.demography-section .info-detail-card:nth-child(4),
+.demography-section .info-detail-card:nth-child(5) {
+  background: #f7fbff;
+  border-color: #d2e1eb;
+}
+
+.demography-section .info-detail-card:nth-child(3) .detail-card-icon,
+.demography-section .info-detail-card:nth-child(4) .detail-card-icon,
+.demography-section .info-detail-card:nth-child(5) .detail-card-icon {
+  background: #e5f1f8;
+}
+
+.demography-section .info-detail-card:nth-child(3) strong,
+.demography-section .info-detail-card:nth-child(4) strong,
+.demography-section .info-detail-card:nth-child(5) strong {
+  color: #477997;
+}
+
+
+/* SC Population */
+.demography-section .info-detail-card:nth-child(6) {
+  background: #fffaf2;
+  border-color: #eed5b1;
+}
+
+.demography-section .info-detail-card:nth-child(6) .detail-card-icon {
+  background: #fff0dc;
+}
+
+.demography-section .info-detail-card:nth-child(6) strong {
+  color: #9a5e1b;
+}
+
+
+/* ST Population */
+.demography-section .info-detail-card:nth-child(7) {
+  background: #f2fff6;
+  border-color: #c8e4d0;
+}
+
+.demography-section .info-detail-card:nth-child(7) .detail-card-icon {
+  background: #e0f3e6;
+}
+
+.demography-section .info-detail-card:nth-child(7) strong {
+  color: #398052;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .demography-section .detail-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .demography-section .detail-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .demography-section .detail-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demography-section .info-detail-card {
+    padding: 11px;
+  }
+
+  .demography-section .info-detail-card strong {
+    font-size: 16px;
+  }
+}
+
+/* =========================================
+   HEALTHCARE
+========================================= */
+
+.healthcare-card {
+  background: linear-gradient(
+    135deg,
+    #f7fffb,
+    #eafaf1
+  );
+
+  border-color: #cfe6d7;
+}
+
+
+/* =========================================
+   HEALTHCARE HEADING
+========================================= */
+
+.healthcare-card .card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.healthcare-card .card-heading span {
+  display: block;
+  margin-bottom: 2px;
+
+  color: #5b7665;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.healthcare-card .card-heading h2 {
+  margin: 0;
+
+  color: #2b7145;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.healthcare-card .heading-icon {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #dcf3e4;
+  border: 1px solid #c8e4d0;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   HEALTH STAT GRID
+========================================= */
+
+.healthcare-card .health-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+
+/* =========================================
+   HEALTH STAT CARD
+========================================= */
+
+.healthcare-card .health-stat {
+  min-width: 0;
+  padding: 11px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+  border: 1px solid #dbe7df;
+
+  transition: 0.2s ease;
+}
+
+.healthcare-card .health-stat:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  border-color: #b9d8c3;
+}
+
+.healthcare-card .health-stat span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #526158;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.healthcare-card .health-stat strong {
+  display: block;
+
+  color: #2b7145;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   MAIN HEALTH CARDS
+========================================= */
+
+/* Hospitals */
+.healthcare-card .hospital-stat {
+  background: #fff7f7;
+  border-color: #ead1d1;
+}
+
+.healthcare-card .hospital-stat strong {
+  color: #b34b4b;
+}
+
+
+/* Medical Colleges */
+.healthcare-card .medical-stat {
+  background: #f5faff;
+  border-color: #d2e1eb;
+}
+
+.healthcare-card .medical-stat strong {
+  color: #477997;
+}
+
+
+/* CHC */
+.healthcare-card .chc-stat {
+  background: #f2fff6;
+  border-color: #c8e4d0;
+}
+
+.healthcare-card .chc-stat strong {
+  color: #398052;
+}
+
+
+/* =========================================
+   ADDITIONAL HEALTH CARDS
+========================================= */
+
+/* Sub Health Centers */
+.healthcare-card .health-stat:nth-child(4) {
+  background: #f7fbff;
+  border-color: #d2e1eb;
+}
+
+.healthcare-card .health-stat:nth-child(4) strong {
+  color: #477997;
+}
+
+
+/* Jeevan Deep Samitis */
+.healthcare-card .health-stat:nth-child(5) {
+  background: #fffaf2;
+  border-color: #eed5b1;
+}
+
+.healthcare-card .health-stat:nth-child(5) strong {
+  color: #9a5e1b;
+}
+
+
+/* Mitanin */
+.healthcare-card .health-stat:nth-child(6) {
+  background: #fffaf6;
+  border-color: #ead9c8;
+}
+
+.healthcare-card .health-stat:nth-child(6) strong {
+  color: #a56835;
+}
+
+
+/* Red Cross */
+.healthcare-card .health-stat:nth-child(7) {
+  background: #fff7f7;
+  border-color: #ead1d1;
+}
+
+.healthcare-card .health-stat:nth-child(7) strong {
+  color: #b34b4b;
+}
+
+
+/* Mass Drug Centers */
+.healthcare-card .health-stat:nth-child(8) {
+  background: #f8f5ff;
+  border-color: #ddd2ed;
+}
+
+.healthcare-card .health-stat:nth-child(8) strong {
+  color: #72539a;
+}
+
+
+/* =========================================
+   HEALTH LISTS
+========================================= */
+
+.healthcare-card .health-lists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.healthcare-card .health-list {
+  min-width: 0;
+  padding: 11px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #dbe7df;
+}
+
+.healthcare-card .health-list h4 {
+  margin: 0 0 8px;
+
+  color: #3d5948;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.healthcare-card .health-list ul {
+  margin: 0;
+  padding-left: 17px;
+}
+
+.healthcare-card .health-list li {
+  margin-bottom: 5px;
+
+  color: #59665e;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.healthcare-card .health-list li:last-child {
+  margin-bottom: 0;
+}
+
+.healthcare-card .no-data {
+  color: #8b918d;
+  font-style: italic;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .healthcare-card .health-stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 750px) {
+  .healthcare-card .health-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .healthcare-card .health-lists {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .healthcare-card .health-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .healthcare-card .health-stat {
+    padding: 10px;
+  }
+
+  .healthcare-card .health-stat strong {
+    font-size: 17px;
+  }
+}
+
+/* =========================================
+   ECONOMY
+========================================= */
+
+.economy-section {
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf5,
+      #fff0e4
+    );
+
+  border-color: #ead9c8;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.economy-section .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.economy-section .section-icon {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #fff0df;
+  border: 1px solid #ead9c8;
+
+  font-size: 20px;
+}
+
+.economy-section .section-title h2 {
+  margin: 0;
+
+  color: #8a5a28;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.economy-section .section-title p {
+  margin: 2px 0 0;
+
+  color: #8b8177;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   HIGHLIGHT CARDS
+========================================= */
+
+.economy-section .highlight-detail-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.economy-section .highlight-item {
+  min-width: 0;
+  padding: 12px;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #ead9c8;
+
+  transition: 0.2s ease;
+}
+
+.economy-section .highlight-item:hover {
+  background: #ffffff;
+  border-color: #d8b995;
+  transform: translateY(-2px);
+}
+
+.economy-section .highlight-item span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #75685d;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.economy-section .highlight-item strong {
+  display: block;
+
+  color: #9a5e1b;
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 800;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* Major Mineral */
+.economy-section .highlight-item:first-child {
+  background: #fffaf2;
+  border-color: #eed5b1;
+}
+
+.economy-section .highlight-item:first-child strong {
+  color: #9a5e1b;
+}
+
+
+/* Major Mining Area */
+.economy-section .highlight-item:last-child {
+  background: #f8f5ff;
+  border-color: #ddd2ed;
+}
+
+.economy-section .highlight-item:last-child strong {
+  color: #72539a;
+}
+
+
+/* =========================================
+   MAJOR ECONOMIC SECTORS
+========================================= */
+
+.economy-section .detail-list-box {
+  margin-top: 10px;
+  padding: 11px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #ead9c8;
+}
+
+.economy-section .detail-list-box h3 {
+  margin: 0 0 9px;
+
+  color: #715238;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* Sector Tags */
+.economy-section .detail-tag-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.economy-section .detail-tag {
+  display: flex;
+  align-items: center;
+
+  min-height: 36px;
+  padding: 7px 9px;
+
+  border-radius: 8px;
+
+  background: #fffaf5;
+  border: 1px solid #ead9c8;
+
+  color: #755c48;
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.economy-section .detail-tag:hover {
+  background: #ffffff;
+  border-color: #d8b995;
+  color: #8a5a28;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+  .economy-section .detail-tag-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .economy-section .highlight-detail-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .economy-section .detail-tag-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .economy-section .highlight-item {
+    padding: 11px;
+  }
+
+  .economy-section .highlight-item strong {
+    font-size: 16px;
+  }
+}
+
+/* =========================================
+   AGRICULTURE
+========================================= */
+
+.agriculture-section {
+  border: 1px solid #d5e5c8;
+  background: linear-gradient(135deg, #fbfdf9, #f1f8eb) !important;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.agriculture-section .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.agriculture-section .section-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+  background: #e1f1d2;
+  border: 1px solid #c9dfb2;
+
+  font-size: 20px;
+}
+
+.agriculture-section .section-title h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #40502f;
+}
+
+.agriculture-section .section-title p {
+  margin: 2px 0 0;
+  font-size: 10px;
+  color: #78836f;
+}
+
+
+/* =========================================
+   TWO COLUMN GRID
+========================================= */
+
+.agriculture-section .two-column-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 7px;
+}
+
+
+/* =========================================
+   DETAIL BOX
+========================================= */
+
+.agriculture-section .detail-list-box {
+  min-width: 0;
+  padding: 10px;
+
+  border: 1px solid #dce7d4;
+  border-radius: 9px;
+
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.agriculture-section .detail-list-box:hover {
+  transform: translateY(-2px);
+  border-color: #bfd39e;
+}
+
+
+/* =========================================
+   MAJOR ACTIVITIES
+========================================= */
+
+.agriculture-section .detail-list-box:first-child {
+  background: linear-gradient(135deg, #f3faec, #e8f4dc);
+  border-color: #cddfb9;
+}
+
+.agriculture-section .detail-list-box:first-child h3 {
+  color: #4d6b32;
+}
+
+
+/* =========================================
+   FARMER INITIATIVES
+========================================= */
+
+.agriculture-section .detail-list-box:last-child {
+  background: linear-gradient(135deg, #fff9f0, #ffeedb);
+  border-color: #ead5bc;
+}
+
+.agriculture-section .detail-list-box:last-child h3 {
+  color: #8a5a28;
+}
+
+
+/* =========================================
+   BOX HEADING
+========================================= */
+
+.agriculture-section .detail-list-box h3 {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.agriculture-section .vertical-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+/* =========================================
+   LIST ITEM
+========================================= */
+
+.agriculture-section .detail-list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-height: 34px;
+  padding: 6px 8px;
+
+  border: 1px solid #dfe8d8;
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  color: #4f5f47;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  transition: 0.2s ease;
+}
+
+.agriculture-section .detail-list-item:hover {
+  background: #ffffff;
+  border-color: #bfd39e;
+  transform: translateX(1px);
+}
+
+
+/* =========================================
+   CHECK ICON - BIGGER
+========================================= */
+
+.agriculture-section .detail-list-item span {
+  width: 25px;
+  height: 25px;
+  min-width: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #e1f0d3;
+  border: 1px solid #c9dfb4;
+
+  color: #5f812a;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   FARMER INITIATIVE ITEMS
+========================================= */
+
+.agriculture-section .detail-list-box:last-child .detail-list-item {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: #ead9c7;
+  color: #66513b;
+}
+
+.agriculture-section .detail-list-box:last-child .detail-list-item span {
+  background: #ffe7c9;
+  border-color: #e9cfad;
+  color: #a06a2d;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .agriculture-section .two-column-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .agriculture-section .detail-list-box {
+    padding: 9px;
+  }
+
+  .agriculture-section .section-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 18px;
+  }
+
+  .agriculture-section .section-title h2 {
+    font-size: 15px;
+  }
+
+  .agriculture-section .detail-list-box h3 {
+    font-size: 12px;
+  }
+
+  .agriculture-section .detail-list-item {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   CULTURE & HERITAGE
+========================================= */
+
+.culture-section {
+  border: 1px solid #ded6e8;
+  background: linear-gradient(135deg, #fbf9ff, #f3effb) !important;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.culture-section .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.culture-section .section-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+  background: #ebe3f6;
+  border: 1px solid #d8cbe8;
+
+  font-size: 20px;
+}
+
+.culture-section .section-title h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4d3e61;
+}
+
+.culture-section .section-title p {
+  margin: 2px 0 0;
+  font-size: 10px;
+  color: #81758c;
+}
+
+
+/* =========================================
+   CULTURE GRID
+========================================= */
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 7px;
+}
+
+
+/* =========================================
+   CULTURE CARD
+========================================= */
+
+.culture-card {
+  min-width: 0;
+  padding: 10px;
+
+  border: 1px solid #e1d9ea;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+.culture-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbb9dc;
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.culture-card-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 7px;
+
+  border-radius: 8px;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.culture-card h3 {
+  margin: 0 0 7px;
+
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  color: #4d3e61;
+}
+
+
+/* =========================================
+   ITEMS
+========================================= */
+
+.culture-card span {
+  display: flex;
+  align-items: center;
+
+  min-height: 30px;
+  margin-bottom: 5px;
+  padding: 5px 7px;
+
+  border: 1px solid #e5dfeb;
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #5c5364;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  transition: 0.2s ease;
+}
+
+.culture-card span:last-child {
+  margin-bottom: 0;
+}
+
+.culture-card span:hover {
+  background: #ffffff;
+  border-color: #cbb9dc;
+  transform: translateX(1px);
+}
+
+
+/* =========================================
+   TRIBAL CULTURE - GREEN
+========================================= */
+
+.culture-card:nth-child(1) {
+  background: linear-gradient(135deg, #f4faef, #e9f4df);
+  border-color: #d0e0c0;
+}
+
+.culture-card:nth-child(1) .culture-card-icon {
+  background: #e0efd2;
+  border: 1px solid #c8ddb5;
+}
+
+.culture-card:nth-child(1) h3 {
+  color: #4d6b32;
+}
+
+.culture-card:nth-child(1) span {
+  background: #fbfdf8;
+  border-color: #dce8d2;
+  color: #536247;
+}
+
+
+/* =========================================
+   TRADITIONAL DANCE - PINK
+========================================= */
+
+.culture-card:nth-child(2) {
+  background: linear-gradient(135deg, #fff6fa, #fceaf2);
+  border-color: #ead3df;
+}
+
+.culture-card:nth-child(2) .culture-card-icon {
+  background: #f8dfeb;
+  border: 1px solid #e8c9d9;
+}
+
+.culture-card:nth-child(2) h3 {
+  color: #8a4d69;
+}
+
+.culture-card:nth-child(2) span {
+  background: #fffafd;
+  border-color: #ead9e2;
+  color: #6c5360;
+}
+
+
+/* =========================================
+   FESTIVALS - ORANGE
+========================================= */
+
+.culture-card:nth-child(3) {
+  background: linear-gradient(135deg, #fffaf2, #fff0dc);
+  border-color: #ead8bd;
+}
+
+.culture-card:nth-child(3) .culture-card-icon {
+  background: #ffe9cc;
+  border: 1px solid #ead2ae;
+}
+
+.culture-card:nth-child(3) h3 {
+  color: #8a5a28;
+}
+
+.culture-card:nth-child(3) span {
+  background: #fffdf8;
+  border-color: #eadfce;
+  color: #6c5944;
+}
+
+
+/* =========================================
+   HERITAGE PLACES - BLUE
+========================================= */
+
+.culture-card:nth-child(4) {
+  background: linear-gradient(135deg, #f4f9ff, #e9f2fc);
+  border-color: #d1dfed;
+}
+
+.culture-card:nth-child(4) .culture-card-icon {
+  background: #deebf7;
+  border: 1px solid #c9dceb;
+}
+
+.culture-card:nth-child(4) h3 {
+  color: #416987;
+}
+
+.culture-card:nth-child(4) span {
+  background: #fbfdff;
+  border-color: #d8e4ee;
+  color: #526878;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .culture-card {
+    padding: 9px;
+  }
+
+  .culture-card-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 18px;
+  }
+
+  .culture-card h3 {
+    font-size: 12px;
+  }
+
+  .culture-card span {
+    font-size: 9px;
+  }
+}
+/* =========================================
+   TRANSPORT & CONNECTIVITY
+========================================= */
+
+.transport-section {
+  border: 1px solid #ddd3e8;
+  background: linear-gradient(135deg, #fcfaff, #f6f0fa) !important;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.transport-section .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.transport-section .section-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  background: #eadcf4;
+  border: 1px solid #d5c0e5;
+
+  font-size: 23px;
+}
+
+.transport-section .section-title h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #57376b;
+}
+
+.transport-section .section-title p {
+  margin: 2px 0 0;
+  font-size: 10px;
+  color: #817389;
+}
+
+
+/* =========================================
+   TWO COLUMN GRID
+========================================= */
+
+.transport-section .two-column-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 7px;
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.transport-section .detail-list-box {
+  min-width: 0;
+  padding: 11px;
+
+  border-radius: 9px;
+  transition: 0.2s ease;
+}
+
+.transport-section .detail-list-box:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ROAD CONNECTIVITY - BLUE/PURPLE
+========================================= */
+
+.transport-section .detail-list-box:first-child {
+  background: linear-gradient(135deg, #f2f8ff, #eee8fa);
+  border: 1px solid #d1d8ea;
+}
+
+.transport-section .detail-list-box:first-child h3 {
+  margin: 0 0 8px;
+  color: #4f5680;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* ROAD TAGS */
+
+.transport-section .detail-list-box:first-child .detail-tag {
+  background: #faf9ff;
+  border: 1px solid #d9d8e9;
+  color: #565b78;
+}
+
+.transport-section .detail-list-box:first-child .detail-tag:hover {
+  background: #ffffff;
+  border-color: #bcb8d2;
+}
+
+
+/* =========================================
+   RAILWAY CONNECTIVITY - PURPLE
+========================================= */
+
+.transport-section .detail-list-box:last-child {
+  background: linear-gradient(135deg, #faf5ff, #eee1f7);
+  border: 1px solid #d9c5e5;
+}
+
+.transport-section .detail-list-box:last-child h3 {
+  margin: 0 0 8px;
+  color: #70458b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* RAILWAY TAGS */
+
+.transport-section .detail-list-box:last-child .detail-tag {
+  background: #fcf9ff;
+  border: 1px solid #dfcfe9;
+  color: #704f80;
+}
+
+.transport-section .detail-list-box:last-child .detail-tag:hover {
+  background: #ffffff;
+  border-color: #c5acd5;
+}
+
+
+/* =========================================
+   TAG GRID
+========================================= */
+
+.transport-section .detail-tag-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+
+/* =========================================
+   TAG
+========================================= */
+
+.transport-section .detail-tag {
+  display: flex;
+  align-items: center;
+
+  min-height: 34px;
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  transition: 0.2s ease;
+}
+
+
+/* =========================================
+   NEAREST AIRPORT - PINK
+========================================= */
+
+.transport-section .airport-card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  margin-top: 8px;
+  padding: 10px 11px;
+
+  border: 1px solid #e8c7d8;
+  border-radius: 9px;
+
+  background: linear-gradient(135deg, #fff7fb, #fbe8f1);
+}
+
+
+/* AIRPORT ICON */
+
+.transport-section .airport-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f6d8e7;
+  border: 1px solid #e5bfd2;
+
+  font-size: 24px;
+}
+
+
+/* AIRPORT TEXT */
+
+.transport-section .airport-card > div > span {
+  display: block;
+  margin-bottom: 2px;
+
+  color: #a05c7b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.transport-section .airport-card h3 {
+  margin: 0;
+
+  color: #874465;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.transport-section .airport-card p {
+  margin: 2px 0 0;
+
+  color: #936f80;
+  font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .transport-section .two-column-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .transport-section .section-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 20px;
+  }
+
+  .transport-section .section-title h2 {
+    font-size: 15px;
+  }
+
+  .transport-section .detail-list-box {
+    padding: 9px;
+  }
+
+  .transport-section .detail-tag-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transport-section .detail-tag {
+    font-size: 10px;
+  }
+}
+/* =========================================
+   PUBLIC UTILITIES
+========================================= */
+
+.public-utilities-section {
+  border: 1px solid #d8dce9;
+  background: linear-gradient(135deg, #fafaff, #f1f2fa) !important;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.public-utilities-section .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.public-utilities-section .section-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  background: #e5e5f5;
+  border: 1px solid #d0d0e7;
+
+  font-size: 23px;
+}
+
+.public-utilities-section .section-title h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #454568;
+}
+
+.public-utilities-section .section-title p {
+  margin: 2px 0 0;
+  font-size: 10px;
+  color: #77788b;
+}
+
+
+/* =========================================
+   UTILITY GRID
+========================================= */
+
+.public-utilities-section .utility-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 7px;
+}
+
+
+/* =========================================
+   UTILITY CARD
+========================================= */
+
+.public-utilities-section .utility-card {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  min-width: 0;
+  min-height: 58px;
+
+  padding: 9px 10px;
+
+  border-radius: 9px;
+  border: 1px solid #dddfea;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+.public-utilities-section .utility-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(70, 70, 110, 0.08);
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.public-utilities-section .utility-card > span {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  font-size: 21px;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.public-utilities-section .utility-card small {
+  display: block;
+  margin-bottom: 2px;
+
+  font-size: 10px;
+  line-height: 1.3;
+  color: #687080;
+  font-weight: 600;
+}
+
+.public-utilities-section .utility-card strong {
+  display: block;
+
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 800;
+
+  color: #4c5268;
+}
+
+
+/* =========================================
+   1. BANKS - BLUE
+========================================= */
+
+.public-utilities-section .utility-card:nth-child(1) {
+  background: linear-gradient(135deg, #f3f9ff, #e8f2fb);
+  border-color: #cddfea;
+}
+
+.public-utilities-section .utility-card:nth-child(1) > span {
+  background: #dcecf8;
+  border: 1px solid #c8deeb;
+}
+
+.public-utilities-section .utility-card:nth-child(1) strong {
+  color: #3f6f91;
+}
+
+
+/* =========================================
+   2. PDS - ORANGE
+========================================= */
+
+.public-utilities-section .utility-card:nth-child(2) {
+  background: linear-gradient(135deg, #fffaf2, #fff0dc);
+  border-color: #ead8bd;
+}
+
+.public-utilities-section .utility-card:nth-child(2) > span {
+  background: #ffe8c9;
+  border: 1px solid #ead1aa;
+}
+
+.public-utilities-section .utility-card:nth-child(2) strong {
+  color: #98652c;
+}
+
+
+/* =========================================
+   3. COLLEGES - PURPLE
+========================================= */
+
+.public-utilities-section .utility-card:nth-child(3) {
+  background: linear-gradient(135deg, #faf6ff, #eee4f7);
+  border-color: #d9cbe6;
+}
+
+.public-utilities-section .utility-card:nth-child(3) > span {
+  background: #e8dcf3;
+  border: 1px solid #d5c2e4;
+}
+
+.public-utilities-section .utility-card:nth-child(3) strong {
+  color: #76508f;
+}
+
+
+/* =========================================
+   4. ELECTRICITY - YELLOW
+========================================= */
+
+.public-utilities-section .utility-card:nth-child(4) {
+  background: linear-gradient(135deg, #fffdf2, #fff5d5);
+  border-color: #eadfb5;
+}
+
+.public-utilities-section .utility-card:nth-child(4) > span {
+  background: #fff0b9;
+  border: 1px solid #e6d68f;
+}
+
+.public-utilities-section .utility-card:nth-child(4) strong {
+  color: #927727;
+}
+
+
+/* =========================================
+   5. HOSPITALS - RED
+========================================= */
+
+.public-utilities-section .utility-card:nth-child(5) {
+  background: linear-gradient(135deg, #fff7f7, #ffebeb);
+  border-color: #ead0d0;
+}
+
+.public-utilities-section .utility-card:nth-child(5) > span {
+  background: #f9dede;
+  border: 1px solid #e8c8c8;
+}
+
+.public-utilities-section .utility-card:nth-child(5) strong {
+  color: #a84f4f;
+}
+
+
+/* =========================================
+   6. MUNICIPALITIES - GREEN
+========================================= */
+
+.public-utilities-section .utility-card:nth-child(6) {
+  background: linear-gradient(135deg, #f4fbf5, #e7f4e9);
+  border-color: #cfe2d2;
+}
+
+.public-utilities-section .utility-card:nth-child(6) > span {
+  background: #dcefe0;
+  border: 1px solid #c7dfcb;
+}
+
+.public-utilities-section .utility-card:nth-child(6) strong {
+  color: #4d8058;
+}
+
+
+/* =========================================
+   7. NGOs - PINK
+========================================= */
+
+.public-utilities-section .utility-card:nth-child(7) {
+  background: linear-gradient(135deg, #fff7fb, #fbe8f2);
+  border-color: #e8cedb;
+}
+
+.public-utilities-section .utility-card:nth-child(7) > span {
+  background: #f5dce8;
+  border: 1px solid #e5c5d5;
+}
+
+.public-utilities-section .utility-card:nth-child(7) strong {
+  color: #9a5275;
+}
+
+
+/* =========================================
+   8. POSTAL SERVICES - TEAL
+========================================= */
+
+.public-utilities-section .utility-card:nth-child(8) {
+  background: linear-gradient(135deg, #f2fbfa, #e2f3f0);
+  border-color: #c9dfdc;
+}
+
+.public-utilities-section .utility-card:nth-child(8) > span {
+  background: #d7eeea;
+  border: 1px solid #c2dfda;
+}
+
+.public-utilities-section .utility-card:nth-child(8) strong {
+  color: #438078;
+}
+
+
+/* =========================================
+   9. SCHOOLS - PURPLE/PINK
+========================================= */
+
+.public-utilities-section .utility-card:nth-child(9) {
+  background: linear-gradient(135deg, #faf6ff, #f2e8f8);
+  border-color: #ddcde5;
+}
+
+.public-utilities-section .utility-card:nth-child(9) > span {
+  background: #eadcf2;
+  border: 1px solid #d8c4e2;
+}
+
+.public-utilities-section .utility-card:nth-child(9) strong {
+  color: #7b548d;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .public-utilities-section .utility-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .public-utilities-section .section-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 20px;
+  }
+
+  .public-utilities-section .section-title h2 {
+    font-size: 15px;
+  }
+
+  .public-utilities-section .utility-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .public-utilities-section .utility-card {
+    min-height: 54px;
+    padding: 8px;
+  }
+
+  .public-utilities-section .utility-card > span {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 20px;
+  }
+
+  .public-utilities-section .utility-card strong {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   HELPLINES
+========================= */
+
+.helpline-card {
+  background: linear-gradient(135deg, #fffaf6, #fff0e7);
+  border-color: #ead8ca;
+}
+
+.helpline-card .card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.helpline-card .card-heading span {
+  display: block;
+  margin-bottom: 2px;
+  color: #9a7359;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.helpline-card .card-heading h2 {
+  margin: 0;
+  color: #754d37;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.helpline-card .heading-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #ffe5d5;
+  border: 1px solid #efd0bd;
+
+  font-size: 18px;
+}
+
+
+/* CATEGORY GRID */
+
+.helpline-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+
+/* CATEGORY */
+
+.helpline-category {
+  min-width: 0;
+
+  padding: 11px;
+
+  border-radius: 10px;
+  border: 1px solid #eaded7;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  transition: 0.2s ease;
+}
+
+.helpline-category:hover {
+  transform: translateY(-2px);
+}
+
+
+/* CATEGORY TITLE */
+
+.helpline-category-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 9px;
+}
+
+.helpline-category-title > span {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+.helpline-category-title h3 {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  color: #5d4639;
+}
+
+.helpline-category-title p {
+  margin: 2px 0 0;
+
+  font-size: 8px;
+  color: #8c817a;
+}
+
+
+/* EMERGENCY */
+
+.emergency-category {
+  background: linear-gradient(135deg, #fff8f7, #ffeded);
+  border-color: #ead1d1;
+}
+
+.emergency-category .helpline-category-title > span {
+  background: #ffe1df;
+  border: 1px solid #edc9c7;
+}
+
+.emergency-category .helpline-category-title h3 {
+  color: #9b4848;
+}
+
+
+/* SOCIAL */
+
+.social-category {
+  background: linear-gradient(135deg, #fffaf6, #fff0e4);
+  border-color: #ead8c8;
+}
+
+.social-category .helpline-category-title > span {
+  background: #ffe7d2;
+  border: 1px solid #ecd1b7;
+}
+
+.social-category .helpline-category-title h3 {
+  color: #95602f;
+}
+
+
+/* ADMINISTRATIVE */
+
+.administrative-category {
+  background: linear-gradient(135deg, #faf8ff, #f0ecff);
+  border-color: #ddd4ea;
+}
+
+.administrative-category .helpline-category-title > span {
+  background: #e9e1f5;
+  border: 1px solid #d7cbe7;
+}
+
+.administrative-category .helpline-category-title h3 {
+  color: #665080;
+}
+
+
+/* HELPLINE LIST */
+
+.helpline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+/* ITEM */
+
+.helpline-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-height: 42px;
+
+  padding: 6px 8px;
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e4ddd8;
+
+  transition: 0.2s ease;
+}
+
+.helpline-item:hover {
+  background: #ffffff;
+  transform: translateX(2px);
+}
+
+
+/* ICON */
+
+.helpline-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #f5eee9;
+  border: 1px solid #e4d9d1;
+
+  font-size: 14px;
+}
+
+
+/* TEXT */
+
+.helpline-item > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.helpline-item strong {
+  color: #5a504b;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.helpline-item b {
+  color: #8a5137;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+
+/* CATEGORY COLORS */
+
+.emergency-category .helpline-item {
+  border-color: #ead6d5;
+}
+
+.emergency-category .helpline-item b {
+  color: #ad4b4b;
+}
+
+.social-category .helpline-item {
+  border-color: #eadbce;
+}
+
+.social-category .helpline-item b {
+  color: #a06635;
+}
+
+.administrative-category .helpline-item {
+  border-color: #dfd8e8;
+}
+
+.administrative-category .helpline-item b {
+  color: #72558d;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .helpline-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .helpline-category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .helpline-card .heading-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 16px;
+  }
+
+  .helpline-category {
+    padding: 9px;
+  }
+
+  .helpline-item {
+    min-height: 40px;
+  }
+
+  .helpline-item b {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.district-hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 350px;
+
+  padding: 42px 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  border-radius: 22px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid #cfe4d5;
+
+  box-shadow:
+    0 12px 35px rgba(44, 87, 59, 0.12);
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.district-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.68) 0%,
+      rgba(0, 0, 0, 0.45) 45%,
+      rgba(0, 0, 0, 0.12) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   HERO CONTENT - LEFT SIDE
+========================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  width: 65%;
+
+  margin-right: auto;
+}
+
+
+/* =========================================
+   LOCATION ICON
+========================================= */
+
+.hero-location-icon {
+  width: 78px;
+  height: 78px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 19px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid #d8e9dd;
+
+  font-size: 37px;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-text {
+  min-width: 0;
+}
+
+
+/* =========================================
+   KICKER
+========================================= */
+
+.section-kicker {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #e2f8e8;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   DISTRICT NAME
+========================================= */
+
+.hero-text h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+
+  text-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-text p {
+  max-width: 650px;
+
+  margin: 13px 0 0;
+
+  color: rgba(255, 255, 255, 0.94);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================
+   HERO SYMBOL - RIGHT SIDE
+========================================= */
+
+.hero-symbol {
+  position: relative;
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  margin-left: auto;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.82);
+
+  font-size: 200px;
+
+  opacity: 0.9;
+
+  transform: rotate(-5deg);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .district-hero {
+    min-height: 240px;
+
+    padding: 35px;
+  }
+
+  .hero-content {
+    width: 70%;
+  }
+
+  .hero-location-icon {
+    width: 68px;
+    height: 68px;
+
+    font-size: 32px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-symbol {
+    width: 85px;
+    height: 85px;
+
+    font-size: 48px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .district-hero {
+    min-height: 230px;
+
+    padding: 28px 25px;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    gap: 16px;
+  }
+
+  .hero-location-icon {
+    width: 58px;
+    height: 58px;
+
+    font-size: 27px;
+  }
+
+  .section-kicker {
+    font-size: 10px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+
+  .hero-symbol {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .district-hero {
+    min-height: 220px;
+
+    padding: 25px 20px;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    gap: 13px;
+  }
+
+  .hero-location-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 29px;
+  }
+
+  .hero-text p {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,783 @@
+.cg-map-container {
+  width: 100%;
+  height: 100%;
+  min-height: 760px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dbe4ea;
+  border-radius: 16px;
+}
+
+.cg-map-area {
+  position: relative;
+  flex: 1;
+  min-height: 620px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(239, 249, 226, 0.8),
+      transparent 60%
+    ),
+    #fbfdf9;
+}
+
+.cg-map-svg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  z-index: 2;
+
+  overflow: visible;
+}
+
+/* ================================
+   MAP HEADER
+================================ */
+
+.cg-map-heading {
+  min-height: 92px;
+
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cg-map-title {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.cg-map-logo {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #3f8f35,
+    #75b94e
+  );
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 5px 14px
+    rgba(63, 143, 53, 0.22);
+}
+
+.cg-map-label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #6d9c3c;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+}
+
+.cg-map-title h3 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 23px;
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+.cg-map-title p {
+  margin: 4px 0 0;
+
+  color: #718096;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.cg-map-count {
+  flex-shrink: 0;
+
+  padding: 7px 11px;
+
+  border-radius: 999px;
+
+  background: #f0f8e9;
+
+  border: 1px solid #dceccc;
+
+  color: #578d31;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.6px;
+}
+
+/* ================================
+   MAP AREA
+================================ */
+
+.cg-map-area {
+  position: relative;
+  flex: 1;
+  min-height: 500px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(239, 249, 226, 0.8),
+      transparent 60%
+    ),
+    #fbfdf9;
+}
+/* ================================
+   SVG MAP
+================================ */
+
+.cg-map-svg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  z-index: 2;
+
+  overflow: visible;
+}
+
+.cg-district-layer {
+  width: 100%;
+  height: 100%;
+}
+
+/* ================================
+   DISTRICTS
+================================ */
+
+.cg-district {
+  cursor: pointer;
+
+  outline: none;
+}
+
+.cg-district-path {
+  stroke: #ffffff;
+
+  stroke-width: 1.5;
+
+  stroke-linejoin: round;
+  stroke-linecap: round;
+
+  vector-effect: non-scaling-stroke;
+
+  transition:
+    fill 0.18s ease,
+    filter 0.18s ease,
+    stroke-width 0.18s ease;
+}
+
+/* Hover */
+
+.cg-district:hover .cg-district-path,
+.cg-district.is-hovered .cg-district-path {
+  stroke: #2f6e29;
+
+  stroke-width: 2.5;
+
+  filter:
+    brightness(0.97)
+    saturate(1.08);
+}
+
+/* Selected */
+
+.cg-district.is-selected .cg-district-path {
+  stroke: #174ea6;
+
+  stroke-width: 3;
+
+  filter:
+    drop-shadow(
+      0 3px 5px
+      rgba(37, 99, 235, 0.28)
+    );
+}
+
+/* ================================
+   DISTRICT LABELS
+================================ */
+
+.cg-district-name {
+  pointer-events: none;
+
+  user-select: none;
+
+  fill: #263528;
+
+  font-size: 7.5px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.35px;
+
+  paint-order: stroke;
+
+  stroke: rgba(255, 255, 255, 0.95);
+
+  stroke-width: 2.5px;
+
+  stroke-linejoin: round;
+
+  text-transform: uppercase;
+}
+
+.cg-district:hover .cg-district-name,
+.cg-district.is-hovered .cg-district-name {
+  fill: #173d1a;
+
+  font-size: 8px;
+}
+
+.cg-district-name.selected-label {
+  fill: #ffffff;
+
+  stroke:
+    rgba(30, 64, 175, 0.55);
+
+  stroke-width: 2.8px;
+}
+
+/* ================================
+   MAP WATERMARK
+================================ */
+
+.cg-map-watermark {
+  position: absolute;
+
+  right: 18px;
+  bottom: 14px;
+
+  z-index: 1;
+
+  color:
+    rgba(77, 128, 55, 0.045);
+
+  font-size: 120px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -8px;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+/* ================================
+   NORTH ARROW
+================================ */
+
+.cg-north {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  z-index: 5;
+
+  width: 42px;
+  height: 58px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  border: 1px solid #dfe8d8;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  box-shadow:
+    0 5px 16px
+    rgba(15, 23, 42, 0.08);
+
+  backdrop-filter: blur(5px);
+}
+
+.cg-north span {
+  color: #4c7439;
+
+  font-size: 10px;
+
+  font-weight: 900;
+}
+
+.north-arrow {
+  color: #4c943b;
+
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+/* ================================
+   TOOLTIP
+================================ */
+
+.cg-map-tooltip {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  z-index: 10;
+
+  min-width: 175px;
+
+  padding: 12px 15px;
+
+  border: 1px solid #dbe7d4;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 10px 28px
+    rgba(15, 23, 42, 0.13);
+
+  backdrop-filter: blur(8px);
+
+  pointer-events: none;
+
+  animation:
+    cgTooltipIn
+    0.15s
+    ease-out;
+}
+
+.cg-map-tooltip span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #79a354;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.1px;
+}
+
+.cg-map-tooltip strong {
+  display: block;
+
+  color: #172033;
+
+  font-size: 13px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.cg-map-tooltip small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #89939f;
+
+  font-size: 9px;
+}
+
+@keyframes cgTooltipIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+/* ================================
+   MAP FOOTER
+================================ */
+
+.cg-map-footer {
+  min-height: 48px;
+
+  padding: 10px 16px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.cg-map-hint {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #78848f;
+
+  font-size: 10px;
+
+  font-weight: 500;
+}
+
+.cg-map-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #6daf45;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(109, 175, 69, 0.12);
+}
+
+.cg-map-footer-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #73806f;
+
+  font-size: 10px;
+}
+
+.cg-map-footer-right strong {
+  color: #4d7937;
+
+  font-weight: 800;
+}
+
+/* ================================
+   LOADING
+================================ */
+
+.cg-map-loading {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  color: #718096;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.cg-loader {
+  width: 27px;
+  height: 27px;
+
+  border: 2px solid #dcebd5;
+
+  border-top-color: #4cae45;
+
+  border-radius: 50%;
+
+  animation:
+    cgSpin
+    0.8s
+    linear
+    infinite;
+}
+
+@keyframes cgSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================================
+   ERROR
+================================ */
+
+.cg-map-error {
+  min-height: 500px;
+
+  padding: 40px 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #fffafa;
+}
+
+.cg-error-icon {
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+.cg-map-error h3 {
+  margin: 0 0 7px;
+
+  color: #172033;
+
+  font-size: 16px;
+}
+
+.cg-map-error p {
+  max-width: 350px;
+
+  margin: 0 0 10px;
+
+  color: #718096;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.cg-map-error small {
+  color: #9ca3af;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+/* ================================
+   KEYBOARD ACCESSIBILITY
+================================ */
+
+.cg-district:focus-visible
+.cg-district-path {
+  stroke: #111827;
+
+  stroke-width: 2.8;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1100px) {
+  .cg-map-container {
+    min-height: 600px;
+  }
+
+  .cg-map-area {
+    min-height: 450px;
+  }
+
+  .cg-map-svg {
+    min-height: 450px;
+  }
+
+  .cg-district-name {
+    font-size: 6.5px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+  .cg-map-heading {
+    min-height: 78px;
+
+    padding: 14px;
+  }
+
+  .cg-map-logo {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+  }
+
+  .cg-map-title h3 {
+    font-size: 19px;
+  }
+
+  .cg-map-title p {
+    font-size: 9px;
+  }
+
+  .cg-map-count {
+    padding: 6px 8px;
+
+    font-size: 8px;
+  }
+
+  .cg-map-area {
+    min-height: 430px;
+  }
+
+  .cg-map-svg {
+    min-height: 430px;
+  }
+
+  .cg-district-name {
+    font-size: 5.5px;
+
+    stroke-width: 2px;
+  }
+
+  .cg-map-tooltip {
+    left: 12px;
+    bottom: 12px;
+
+    min-width: 150px;
+  }
+
+  .cg-map-footer {
+    padding: 9px 12px;
+  }
+
+  .cg-map-hint {
+    font-size: 9px;
+  }
+
+  .cg-map-footer-right {
+    font-size: 9px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .cg-map-heading {
+    align-items: flex-start;
+  }
+
+  .cg-map-count {
+    display: none;
+  }
+
+  .cg-map-area {
+    min-height: 380px;
+  }
+
+  .cg-map-svg {
+    min-height: 380px;
+  }
+
+  .cg-map-footer-right span {
+    display: none;
+  }
+
+  .cg-north {
+    top: 12px;
+    right: 12px;
+  }
+
+  .cg-map-watermark {
+    font-size: 90px;
+  }
+}
