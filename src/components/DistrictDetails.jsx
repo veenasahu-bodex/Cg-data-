@@ -509,7 +509,6 @@ function DistrictDetails({
 
         </div>
 
-
         <div className="admin-grid">
 
 
@@ -527,7 +526,6 @@ function DistrictDetails({
 
           </div>
 
-
           {/* COLLECTOR */}
 
           <div className="admin-card admin-blue">
@@ -541,7 +539,6 @@ function DistrictDetails({
             </strong>
 
           </div>
-
 
           {/* COLLECTOR CONTACT */}
 
@@ -557,30 +554,9 @@ function DistrictDetails({
 
           </div>
 
-
-          {/* POLICE STATIONS */}
-
-          <div className="admin-card admin-purple">
-
-            <span>
-              Police Stations
-            </span>
-
-            <strong>
-
-              {Array.isArray(data.policeStations)
-                ? data.policeStations.length
-                : data.policeStations ?? "N/A"}
-
-            </strong>
-
-          </div>
-
         </div>
 
       </div>
-
-
 
       {/* =========================
           READ MORE

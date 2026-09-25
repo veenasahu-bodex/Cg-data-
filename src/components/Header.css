@@ -4,29 +4,20 @@
 
 .header {
   width: 100%;
-
   min-height: 72px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 20px;
-
   padding: 10px 24px;
-
   background: #ffffff;
-
   border-bottom: 1px solid #dfe9dc;
-
   box-shadow:
     0 3px 12px rgba(45, 75, 40, 0.06);
 
   box-sizing: border-box;
-
   position: sticky;
   top: 0;
-
   z-index: 1000;
 }
 
@@ -38,9 +29,7 @@
 .header-left {
   display: flex;
   align-items: center;
-
   gap: 10px;
-
   min-width: 210px;
 }
 
@@ -57,13 +46,10 @@
 .header-logo {
   width: 42px;
   height: 42px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 11px;
-
   background:
     linear-gradient(
       145deg,
@@ -79,9 +65,7 @@
 
 .header-logo span {
   font-size: 14px;
-
   font-weight: 900;
-
   letter-spacing: 0.5px;
 }
 
@@ -94,23 +78,16 @@
 
 .header-title-wrapper h1 {
   margin: 0;
-
   color: #1d2939;
-
   font-size: 17px;
-
   font-weight: 800;
-
   line-height: 1.2;
 }
 
 .header-title-wrapper p {
   margin: 3px 0 0;
-
   color: #7a8792;
-
   font-size: 9px;
-
   font-weight: 500;
 }
 
@@ -123,17 +100,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 4px;
-
   padding: 4px;
-
   background: #f6faf5;
-
   border: 1px solid #e1ebde;
-
   border-radius: 12px;
-
   box-sizing: border-box;
 }
 
@@ -142,27 +113,17 @@
 
 .header-nav-item {
   min-height: 36px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 6px;
-
   padding: 7px 12px;
-
   border-radius: 8px;
-
   color: #5d6873;
-
   font-size: 11px;
-
   font-weight: 700;
-
   text-decoration: none;
-
   white-space: nowrap;
-
   transition:
     background 0.2s ease,
     color 0.2s ease,
@@ -176,9 +137,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 14px;
-
   line-height: 1;
 }
 
@@ -187,7 +146,6 @@
 
 .header-nav-item:hover {
   color: #4d8d40;
-
   background: #edf7e9;
 }
 
@@ -196,7 +154,6 @@
 
 .header-nav-item.active {
   color: #ffffff;
-
   background:
     linear-gradient(
       135deg,
@@ -216,11 +173,8 @@
 .header-right {
   display: flex;
   align-items: center;
-
   gap: 14px;
-
   min-width: 190px;
-
   justify-content: flex-end;
 }
 
@@ -230,23 +184,18 @@
 .header-stat {
   display: flex;
   align-items: center;
-
   gap: 5px;
 }
 
 .header-stat strong {
   color: #4e9140;
-
   font-size: 16px;
-
   font-weight: 900;
 }
 
 .header-stat span {
   color: #7b858d;
-
   font-size: 9px;
-
   font-weight: 600;
 }
 
@@ -256,21 +205,13 @@
 .header-state {
   display: flex;
   align-items: center;
-
   gap: 6px;
-
   padding: 7px 10px;
-
   border-radius: 20px;
-
   background: #f0f8ed;
-
   color: #4e8643;
-
   font-size: 10px;
-
   font-weight: 700;
-
   white-space: nowrap;
 }
 
@@ -280,15 +221,11 @@
 .state-dot {
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: #61a64c;
-
   box-shadow:
     0 0 0 3px #dcefd7;
 }
-
 
 /* =========================================================
    TABLET
@@ -356,11 +293,8 @@
 
   .header-center {
     width: 100%;
-
     overflow-x: auto;
-
     justify-content: flex-start;
-
     scrollbar-width: none;
   }
 
@@ -370,7 +304,6 @@
 
   .header-nav-item {
     flex-shrink: 0;
-
     padding: 7px 10px;
   }
 

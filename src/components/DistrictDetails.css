@@ -7,19 +7,16 @@
   width: 100%;
   height: 100%;
   min-height: 0;
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f4fbef 0%,
-      #ffffff 48%,
-      #fffdf2 100%
-    );
-
+  gap: 11px;
+  background: linear-gradient(
+    135deg,
+    #f4fbef 0%,
+    #ffffff 48%,
+    #fffdf2 100%
+  );
   color: #0f172a;
   overflow-y: auto;
   overflow-x: hidden;
@@ -50,7 +47,7 @@
   position: absolute;
   top: 5px;
   right: 15px;
-  font-size: 95px;
+  font-size: 85px;
   opacity: 0.035;
   transform: rotate(-12deg);
   pointer-events: none;
@@ -61,7 +58,7 @@
   position: absolute;
   left: -25px;
   bottom: 20px;
-  font-size: 90px;
+  font-size: 80px;
   opacity: 0.035;
   transform: rotate(15deg);
   pointer-events: none;
@@ -75,44 +72,36 @@
 .district-top {
   position: relative;
   z-index: 2;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  gap: 15px;
-  padding: 2px 2px 4px;
+  gap: 12px;
+  padding: 2px 2px 3px;
 }
 
 .district-title {
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 10px;
   min-width: 0;
 }
 
 .district-symbol {
-  width: 58px;
-  height: 58px;
-  min-width: 58px;
-
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 16px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #166534,
-      #22c55e
-    );
-
+  border-radius: 13px;
+  background: linear-gradient(
+    135deg,
+    #166534,
+    #22c55e
+  );
   color: #ffffff;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 900;
-
   box-shadow:
     0 6px 16px rgba(22, 101, 52, 0.16);
 }
@@ -123,32 +112,28 @@
 
 .district-title span {
   display: block;
-  margin-bottom: 3px;
-
+  margin-bottom: 2px;
   color: #15803d;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 1.2;
   font-weight: 900;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
 }
 
 .district-title h2 {
   margin: 0;
-
   color: #243313;
-  font-size: 27px;
+  font-size: 21px;
   line-height: 1.15;
   font-weight: 900;
-  letter-spacing: -0.4px;
-
+  letter-spacing: -0.3px;
   word-break: break-word;
 }
 
 .district-title p {
-  margin: 4px 0 0;
-
+  margin: 3px 0 0;
   color: #64705f;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.4;
   font-weight: 500;
 }
@@ -161,28 +146,21 @@
 .district-active {
   display: flex;
   align-items: center;
-  gap: 7px;
-
-  padding: 7px 12px;
-
+  gap: 5px;
+  padding: 5px 9px;
   border-radius: 999px;
-
   background: #eff9e8;
   border: 1px solid #c9dfad;
-
   color: #58751d;
-
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 800;
-
   white-space: nowrap;
 }
 
 .district-active i {
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   display: block;
-
   border-radius: 50%;
   background: #78a943;
 }
@@ -195,28 +173,21 @@
 .district-stats-grid {
   position: relative;
   z-index: 2;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
-  gap: 10px;
+  gap: 8px;
 }
 
 .district-stat {
-  min-height: 92px;
-
-  padding: 14px;
-
+  min-height: 76px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  border-radius: 15px;
+  border-radius: 13px;
   border: 1px solid transparent;
-
   box-shadow:
     0 4px 15px rgba(15, 23, 42, 0.045);
-
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -224,27 +195,23 @@
 
 .district-stat:hover {
   transform: translateY(-2px);
-
   box-shadow:
     0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
 .district-stat span {
   display: block;
-  margin-bottom: 5px;
-
-  font-size: 11px;
+  margin-bottom: 4px;
+  font-size: 9px;
   line-height: 1.3;
   font-weight: 800;
 }
 
 .district-stat strong {
   display: block;
-
-  font-size: 19px;
+  font-size: 15px;
   line-height: 1.25;
   font-weight: 900;
-
   color: #243313;
   word-break: break-word;
 }
@@ -298,42 +265,32 @@
 .district-headquarter {
   position: relative;
   z-index: 2;
-
   display: flex;
   align-items: center;
-  gap: 13px;
-
-  padding: 15px 17px;
-
-  background:
-    linear-gradient(
-      100deg,
-      #f1faed,
-      #ffffff
-    );
-
+  gap: 10px;
+  padding: 11px 13px;
+  background: linear-gradient(
+    100deg,
+    #f1faed,
+    #ffffff
+  );
   border: 1px solid #cce3b5;
-  border-radius: 16px;
-
+  border-radius: 14px;
   box-shadow:
     0 4px 15px rgba(15, 23, 42, 0.045);
 }
 
 .hq-icon {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 13px;
-
+  border-radius: 11px;
   background: #e1f1d5;
   color: #58751d;
-
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 800;
 }
 
@@ -343,31 +300,27 @@
 
 .district-headquarter span {
   display: block;
-  margin-bottom: 3px;
-
+  margin-bottom: 2px;
   color: #58751d;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 1.2;
   font-weight: 900;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
 }
 
 .district-headquarter h3 {
   margin: 0;
-
   color: #243313;
-  font-size: 21px;
+  font-size: 17px;
   line-height: 1.2;
   font-weight: 900;
-
   word-break: break-word;
 }
 
 .district-headquarter p {
-  margin: 4px 0 0;
-
+  margin: 3px 0 0;
   color: #697565;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.4;
   font-weight: 500;
 }
@@ -380,47 +333,40 @@
 .district-section {
   position: relative;
   z-index: 2;
-
-  padding: 16px;
-
+  padding: 12px;
   background: rgba(255, 255, 255, 0.9);
-
   border: 1px solid #e2e8df;
-  border-radius: 16px;
-
+  border-radius: 14px;
   box-shadow:
     0 4px 16px rgba(15, 23, 42, 0.04);
 }
 
 .district-section-title {
-  margin-bottom: 12px;
+  margin-bottom: 9px;
 }
 
 .district-section-title span {
   display: block;
-  margin-bottom: 3px;
-
+  margin-bottom: 2px;
   color: #789b2e;
-  font-size: 9px;
+  font-size: 7px;
   line-height: 1.2;
   font-weight: 900;
-  letter-spacing: 0.9px;
+  letter-spacing: 0.7px;
 }
 
 .district-section-title h3 {
   margin: 0;
-
   color: #243313;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
   font-weight: 900;
 }
 
 .district-section-title p {
-  margin: 3px 0 0;
-
+  margin: 2px 0 0;
   color: #71806c;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.4;
   font-weight: 500;
 }
@@ -433,25 +379,20 @@
 .cities-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 9px;
+  gap: 7px;
 }
 
 .city-card {
   width: 100%;
-  min-height: 62px;
-
+  min-height: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
-
-  padding: 10px 12px;
-
+  gap: 8px;
+  padding: 7px 9px;
   border: 1px solid transparent;
-  border-radius: 13px;
-
+  border-radius: 11px;
   cursor: pointer;
   text-align: left;
-
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -459,25 +400,20 @@
 
 .city-card:hover {
   transform: translateY(-2px);
-
   box-shadow:
     0 7px 17px rgba(15, 23, 42, 0.07);
 }
 
 .city-icon {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 10px;
-
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.72);
-
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .city-card > div:nth-child(2) {
@@ -487,28 +423,25 @@
 
 .city-card strong {
   display: block;
-
   color: #243313;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.25;
   font-weight: 900;
-
   word-break: break-word;
 }
 
 .city-card span {
   display: block;
   margin-top: 2px;
-
   color: #687565;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 1.3;
   font-weight: 700;
 }
 
 .city-card b {
   color: #58751d;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 900;
 }
 
@@ -543,17 +476,13 @@
 ========================================= */
 
 .no-cities {
-  padding: 17px;
-
+  padding: 13px;
   text-align: center;
-
   border: 1px dashed #cbd5c2;
-  border-radius: 12px;
-
+  border-radius: 10px;
   background: #f8faf6;
   color: #71806c;
-
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 700;
 }
 
@@ -564,61 +493,43 @@
 
 .admin-grid {
   display: grid;
-
   /* Collector ko thodi extra width */
   grid-template-columns: 1fr 1.35fr 1fr 1fr;
-
-  gap: 9px;
+  gap: 7px;
   width: 100%;
 }
 
 .admin-grid > div {
   min-width: 0;
-  min-height: 68px;
-
-  padding: 12px 14px;
-
+  min-height: 50px;
+  padding: 8px 10px;
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   border: 1px solid #e2e8df;
-  border-radius: 13px;
-
+  border-radius: 11px;
   background: #ffffff;
-
   box-shadow:
     0 2px 8px rgba(15, 23, 42, 0.025);
-
   overflow: hidden;
 }
 
 .admin-grid span {
   display: block;
-
-  margin-bottom: 5px;
-
+  margin-bottom: 4px;
   color: #71806c;
-
-  font-size: 9px;
+  font-size: 7px;
   line-height: 1.2;
-
   font-weight: 800;
 }
 
 .admin-grid strong {
   display: block;
-
   color: #243313;
-
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.25;
-
   font-weight: 900;
-
-  /* Long names properly wrap */
   white-space: normal;
   overflow-wrap: break-word;
   word-break: normal;
@@ -656,14 +567,10 @@
 
 .admin-blue strong {
   max-width: 100%;
-
   color: #26344d;
-
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.25;
-
-  font-weight: 900;
-
+  font-weight: 800;
   white-space: normal;
   overflow-wrap: break-word;
   word-break: normal;
@@ -675,71 +582,9 @@
 ========================================= */
 
 @media (max-width: 1100px) {
-
   .admin-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-}
-
-
-@media (max-width: 700px) {
-
-  .admin-grid {
-    grid-template-columns: 1fr;
-    gap: 9px;
-  }
-
-  .admin-grid > div {
-    min-height: 64px;
-    padding: 12px 13px;
-  }
-
-  .admin-grid strong {
-    font-size: 14px;
-  }
-
-}
-
-
-@media (max-width: 450px) {
-
-  .admin-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .admin-grid > div {
-    min-height: 62px;
-  }
-
-  .admin-grid strong {
-    font-size: 14px;
-  }
-
-}
-
-/* =========================================
-   ADMIN CARD COLORS
-========================================= */
-
-.admin-green {
-  background: #f1faed !important;
-  border-color: #cce3b5 !important;
-}
-
-.admin-blue {
-  background: #eef6ff !important;
-  border-color: #c6dcf5 !important;
-}
-
-.admin-yellow {
-  background: #fff9df !important;
-  border-color: #f0d889 !important;
-}
-
-.admin-purple {
-  background: #f8f1fc !important;
-  border-color: #dfc8ee !important;
 }
 
 
@@ -750,35 +595,24 @@
 .district-read-more {
   position: relative;
   z-index: 2;
-
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  gap: 12px;
-
-  padding: 14px 17px;
-
+  gap: 10px;
+  padding: 10px 13px;
   border: none;
-  border-radius: 15px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #5c7d25,
-      #789b2e
-    );
-
+  border-radius: 13px;
+  background: linear-gradient(
+    135deg,
+    #5c7d25,
+    #789b2e
+  );
   color: #ffffff;
-
   cursor: pointer;
   text-align: left;
-
   box-shadow:
     0 6px 17px rgba(88, 117, 29, 0.16);
-
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -786,7 +620,6 @@
 
 .district-read-more:hover {
   transform: translateY(-2px);
-
   box-shadow:
     0 9px 20px rgba(88, 117, 29, 0.22);
 }
@@ -794,25 +627,23 @@
 .district-read-more strong {
   display: block;
   margin-bottom: 2px;
-
   color: #ffffff;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.3;
   font-weight: 900;
 }
 
 .district-read-more span {
   display: block;
-
   color: #eef7df;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 1.4;
   font-weight: 600;
 }
 
 .district-read-more b {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 900;
 }
 
@@ -824,23 +655,15 @@
 .district-back {
   position: relative;
   z-index: 2;
-
   width: 100%;
-
-  padding: 10px 14px;
-
+  padding: 7px 11px;
   border: 1px solid #cce3b5;
-  border-radius: 12px;
-
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.9);
-
   color: #58751d;
-
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 800;
-
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     border-color 0.2s ease;
@@ -859,25 +682,16 @@
 .city-back {
   position: relative;
   z-index: 2;
-
   align-self: flex-start;
-
   margin-bottom: 2px;
-
-  padding: 8px 12px;
-
+  padding: 6px 9px;
   border: 1px solid #cce3b5;
-  border-radius: 10px;
-
+  border-radius: 9px;
   background: #ffffff;
-
   color: #58751d;
-
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 800;
-
   cursor: pointer;
-
   transition: 0.2s ease;
 }
 
@@ -888,41 +702,31 @@
 .city-hero {
   position: relative;
   z-index: 2;
-
   display: flex;
   align-items: center;
-  gap: 13px;
-
-  padding: 17px;
-
-  background:
-    linear-gradient(
-      100deg,
-      #f1faed,
-      #ffffff
-    );
-
+  gap: 10px;
+  padding: 13px;
+  background: linear-gradient(
+    100deg,
+    #f1faed,
+    #ffffff
+  );
   border: 1px solid #cce3b5;
-  border-radius: 16px;
-
+  border-radius: 14px;
   box-shadow:
     0 5px 16px rgba(15, 23, 42, 0.045);
 }
 
 .city-symbol {
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 14px;
-
+  border-radius: 12px;
   background: #e1f1d5;
-
-  font-size: 23px;
+  font-size: 12px;
 }
 
 .city-hero > div:last-child {
@@ -931,30 +735,26 @@
 
 .city-hero span {
   display: block;
-  margin-bottom: 3px;
-
+  margin-bottom: 2px;
   color: #58751d;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 900;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
 }
 
 .city-hero h2 {
   margin: 0;
-
   color: #243313;
-  font-size: 23px;
+  font-size: 19px;
   line-height: 1.2;
   font-weight: 900;
-
   word-break: break-word;
 }
 
 .city-hero p {
-  margin: 4px 0 0;
-
+  margin: 3px 0 0;
   color: #697565;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.4;
   font-weight: 500;
 }
@@ -967,17 +767,14 @@
 .city-info-grid {
   position: relative;
   z-index: 2;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
-  gap: 9px;
+  gap: 7px;
 }
 
 .city-info-card {
-  padding: 14px;
-
-  border-radius: 14px;
+  padding: 10px;
+  border-radius: 12px;
   border: 1px solid transparent;
 }
 
@@ -998,21 +795,18 @@
 
 .city-info-card span {
   display: block;
-  margin-bottom: 5px;
-
+  margin-bottom: 4px;
   color: #71806c;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 800;
 }
 
 .city-info-card strong {
   display: block;
-
   color: #243313;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.3;
   font-weight: 900;
-
   word-break: break-word;
 }
 
@@ -1024,42 +818,35 @@
 .city-about {
   position: relative;
   z-index: 2;
-
-  padding: 17px;
-
+  padding: 13px;
   background: rgba(255, 255, 255, 0.94);
-
   border: 1px solid #e2e8df;
-  border-radius: 15px;
-
+  border-radius: 13px;
   box-shadow:
     0 4px 14px rgba(15, 23, 42, 0.035);
 }
 
 .city-about > span {
   display: block;
-  margin-bottom: 4px;
-
+  margin-bottom: 3px;
   color: #789b2e;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 900;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
 }
 
 .city-about h3 {
-  margin: 0 0 6px;
-
+  margin: 0 0 5px;
   color: #243313;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 900;
 }
 
 .city-about p {
   margin: 0;
-
   color: #596656;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.6;
   font-weight: 500;
 }
@@ -1072,71 +859,54 @@
 .district-not-found {
   position: relative;
   z-index: 2;
-
-  min-height: 320px;
-
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  padding: 25px;
-
+  padding: 19px;
   text-align: center;
-
   background: #ffffff;
-
-  border-radius: 17px;
+  border-radius: 15px;
   border: 1px solid #fecaca;
 }
 
 .district-not-found > div {
-  width: 48px;
-  height: 48px;
-
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-bottom: 12px;
-
+  margin-bottom: 9px;
   border-radius: 50%;
-
   background: #fee2e2;
   color: #b91c1c;
-
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 800;
 }
 
 .district-not-found h2 {
   margin: 0;
-
   color: #243313;
-  font-size: 21px;
+  font-size: 17px;
   font-weight: 900;
 }
 
 .district-not-found p {
-  margin: 6px 0 17px;
-
+  margin: 5px 0 13px;
   color: #71806c;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
 }
 
 .district-not-found button {
-  padding: 9px 15px;
-
+  padding: 7px 12px;
   border: none;
-  border-radius: 10px;
-
+  border-radius: 9px;
   background: #5c7d25;
   color: #ffffff;
-
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 800;
-
   cursor: pointer;
 }
 
@@ -1146,6 +916,7 @@
 ========================================= */
 
 @media (max-width: 1100px) {
+
   .district-stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1161,9 +932,10 @@
 ========================================= */
 
 @media (max-width: 700px) {
+
   .district-details-page {
-    padding: 15px;
-    gap: 12px;
+    padding: 13px;
+    gap: 10px;
   }
 
   .district-top {
@@ -1176,27 +948,27 @@
   }
 
   .district-symbol {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
-    border-radius: 14px;
-    font-size: 17px;
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 12px;
+    font-size: 14px;
   }
 
   .district-title span {
-    font-size: 9px;
+    font-size: 7px;
   }
 
   .district-title h2 {
-    font-size: 23px;
+    font-size: 19px;
   }
 
   .district-title p {
-    font-size: 11px;
+    font-size: 9px;
   }
 
   .district-active {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .district-stats-grid {
@@ -1204,28 +976,40 @@
   }
 
   .district-stat {
-    min-height: 88px;
-    padding: 13px;
+    min-height: 72px;
+    padding: 10px;
   }
 
   .district-stat span {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .district-stat strong {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .district-headquarter {
-    padding: 14px;
+    padding: 11px;
+  }
+
+  .district-headquarter h3 {
+    font-size: 16px;
+  }
+
+  .district-headquarter p {
+    font-size: 9px;
   }
 
   .district-section {
-    padding: 14px;
+    padding: 11px;
   }
 
   .district-section-title h3 {
-    font-size: 19px;
+    font-size: 15px;
+  }
+
+  .district-section-title p {
+    font-size: 8px;
   }
 
   .cities-grid {
@@ -1236,8 +1020,33 @@
     grid-template-columns: 1fr;
   }
 
+  .admin-grid > div {
+    min-height: 57px;
+    padding: 9px 10px;
+  }
+
+  .admin-grid span {
+    font-size: 7px;
+  }
+
+  .admin-grid strong {
+    font-size: 11px;
+  }
+
   .city-info-grid {
     grid-template-columns: 1fr;
+  }
+
+  .city-hero h2 {
+    font-size: 18px;
+  }
+
+  .city-about h3 {
+    font-size: 16px;
+  }
+
+  .city-about p {
+    font-size: 9px;
   }
 }
 
@@ -1247,12 +1056,18 @@
 ========================================= */
 
 @media (max-width: 450px) {
+
   .district-details-page {
-    padding: 12px;
+    padding: 11px;
+    gap: 9px;
   }
 
   .district-title h2 {
-    font-size: 21px;
+    font-size: 18px;
+  }
+
+  .district-title p {
+    font-size: 8px;
   }
 
   .district-stats-grid {
@@ -1260,26 +1075,47 @@
   }
 
   .district-stat {
-    min-height: 80px;
+    min-height: 68px;
+    padding: 10px;
+  }
+
+  .district-stat span {
+    font-size: 8px;
   }
 
   .district-stat strong {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .district-headquarter h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .district-section-title h3 {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .city-card strong {
-    font-size: 14px;
+    font-size: 11px;
+  }
+
+  .city-card span {
+    font-size: 8px;
   }
 
   .admin-grid strong {
-    font-size: 14px;
+    font-size: 11px;
+  }
+
+  .city-hero h2 {
+    font-size: 18px;
+  }
+
+  .city-info-card strong {
+    font-size: 13px;
+  }
+
+  .city-about h3 {
+    font-size: 15px;
   }
 }
