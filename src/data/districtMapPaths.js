@@ -131,7 +131,7 @@ const districtMapPaths = {
     labelY: 620,
   },
 
-  Gariyaband: {
+  Gariaband: {
     path: "M315 575 L345 545 L380 575 L390 625 L360 665 L315 650 L300 625 Z",
     labelX: 345,
     labelY: 610,

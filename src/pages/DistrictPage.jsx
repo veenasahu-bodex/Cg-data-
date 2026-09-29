@@ -1720,8 +1720,6 @@ const publicUtilities = data.publicUtilities || {};
 
             {/* HELPLINES */}
 
-            {/* HELPLINES */}
-
 <section className="district-card helpline-card">
 
   <div className="card-heading">

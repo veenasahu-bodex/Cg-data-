@@ -11481,7 +11481,7 @@ majorMiningArea: "Tilda and Abhanpur areas",
       "Kumarda"
     ],
 
-     tehsils: [
+    tehsils: [
     "Rajnandgaon",
     "Ghumka",
     "Dongargarh",

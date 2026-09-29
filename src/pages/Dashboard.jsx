@@ -7,6 +7,7 @@ import DistrictDetails from "../components/DistrictDetails";
 import SearchBox from "../components/SearchBox";
 
 import districtData from "../data/districtData";
+import CGChatbot from "../components/CGChatbot";
 
 import "./Dashboard.css";
 
@@ -151,7 +152,7 @@ function Dashboard() {
 
       </main>
 
-      <footer className="dashboard-footer">
+            <footer className="dashboard-footer">
         <div>
           <strong>🌾 Chhattisgarh Data</strong>
           <span>
@@ -165,6 +166,8 @@ function Dashboard() {
           <span>Chhattisgarh</span>
         </div>
       </footer>
+
+      <CGChatbot />
 
     </div>
   );
