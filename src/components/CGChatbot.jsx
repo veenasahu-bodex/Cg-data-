@@ -1845,7 +1845,7 @@ export default function CGChatbot() {
 
       const response =
         await fetch(
-          "http://127.0.0.1:8000/api/chat",
+          "https://cg-data.onrender.com/api/chat",
           {
             method: "POST",
 
